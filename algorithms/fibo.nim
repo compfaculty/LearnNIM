@@ -10,4 +10,6 @@ proc fibo(n: int64): int64 =
     else:
         cache[n] = n * fibo(n - 1)
     return cache[n]
-echo fibo(20)
+
+when isMainModule:
+    echo fibo(20) #stack overflow is coming... 

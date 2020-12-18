@@ -53,6 +53,7 @@ echo "My is is" , ageInDays(age)
 proc ageByN(age, n: int): bool =
   result = (age mod n) == 0
 echo "Is devisible ", ageByN(age, 5)
+
 #Create an immutable variable containing your height in centimeters.
 # Print your height in inches. (1 in = 2.54 cm)
 let myHeight:float = 172
@@ -61,8 +62,8 @@ proc HeightInInches(h: float): float =
   result = h / inches
 import math
 echo "I'm in inches ", math.round(HeightInInches(myHeight))  
-#A pipe has a 3/8 inch diameter. Express the diameter in centimeters.
 
+#A pipe has a 3/8 inch diameter. Express the diameter in centimeters.
 proc inchesToCm(diameter: float64): float64 =
   result = diameter * inches
 echo "Diamete in inches ", math.round(inchesToCm(3/8)), ":", inchesToCm(3/8)
@@ -74,13 +75,14 @@ Make a variable fullName by concatenating the previous two variables.
 Don’t forget to put a whitespace in-between. Print your full name.
 ]#
 
-let myname = "Alex"
-let sName = "Granovsky"
-
+let firstName = "Alex"
+let secondName = "Granovsky"
+let fullName = firstName & ' ' & secondName 
 proc pfn(fname, sname : string) =
   echo fname & ' ' & sname
 
-pfn(myname, sName)
+pfn(firstName, secondName)
+echo fullName
 
 #[
 Alice earns $400 every 15 days. 
@@ -89,7 +91,3 @@ After 30 days, has Alice earned more than Bob? (Hint: use relational operators)
 ]#
 echo 800 >= 3.14*8*30
 
-import strutils
-let s = "abra cada bra"
-for ch in strutils.split(s):
-  echo  ch
