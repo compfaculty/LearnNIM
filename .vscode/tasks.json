@@ -17,7 +17,27 @@
       "problemMatcher": [],
       "group": {
         "kind": "build",
-        "isDefault": true
+        "isDefault": true,
+      }
+    },
+    {
+      "label": "SSL",
+      "command": "nim",
+      "args": [
+        "c",
+        "-r:off",
+        "-d:ssl",
+        "-x",
+        "${file}"        
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "type": "shell",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true,
       }
     },
     {
@@ -25,24 +45,28 @@
       "command": "nim",
       "args": [
         "c",
+        "--threads :on",
         "-r",
-        "${file}",
-        "--threads:on"
+        "${file}"        
       ],
       "options": {
         "cwd": "${workspaceRoot}"
       },
       "type": "shell",
-      "problemMatcher": []      
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }      
     },
     {
       "label": "Speed",
       "command": "nim",
       "args": [
         "c",
+        "--opt:speed",
         "-r",
-        "${file}",
-        "--opt:speed"
+        "${file}"        
       ],
       "options": {
         "cwd": "${workspaceRoot}"

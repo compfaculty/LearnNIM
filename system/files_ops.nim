@@ -39,7 +39,7 @@ proc printFileInfo(filePath : string, printout: bool = false, linesRead : int = 
 
 
 when isMainModule:
-  printFileInfo("/home/alexg/.bashrc", true)
+  printFileInfo("/home/compf/owtf", false)
 
 # os.copyFileWithPermissions(myfile, storage)
 

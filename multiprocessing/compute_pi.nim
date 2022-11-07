@@ -12,4 +12,5 @@ proc pi(n: int): float =
   for k in 0..ch.high:
     result += ch[k]
 
-echo formatFloat(pi(50000))
+echo formatFloat(pi(5000000))
+ 
